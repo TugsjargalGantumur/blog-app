@@ -1,5 +1,4 @@
 import React from "react";
-import { Header, Footer } from "../../components";
 import { Header, Footer, Button } from "../../components";
 import { useUserContext } from "../../context";
 import { signOutFunction } from "../../firebase";
