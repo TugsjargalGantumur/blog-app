@@ -1,14 +1,17 @@
 import React from "react";
 import { Header, Footer } from "../../components";
+import { Header, Footer, Button } from "../../components";
 import { useUserContext } from "../../context";
 import { signOutFunction } from "../../firebase";
 import "./HomePage.css";
 
 export const HomePage = () => {
   const { loading, currentUser } = useUserContext();
+
   const handleSignOut = async () => {
     await signOutFunction();
   };
+
   if (loading) {
     return (
       <div
@@ -24,20 +27,24 @@ export const HomePage = () => {
       </div>
     );
   }
+
   return (
     <div>
       <Header />
+
       <div id="home-container">
-        <h1>Home Page</h1>
         {currentUser ? (
           <>
-            <p>Welcome back, {currentUser.displayName}!</p>
-            <button onClick={handleSignOut}>Sign out</button>
+            <h3>Welcome back, {currentUser.displayName}!</h3>
+            <Button onClick={handleSignOut} style={{ width: "100px" }}>
+              Sign out
+            </Button>
           </>
         ) : (
-          <p>Welcome, Guest!</p>
+          <h3>Welcome, Guest!</h3>
         )}
       </div>
+
       <Footer />
     </div>
   );
