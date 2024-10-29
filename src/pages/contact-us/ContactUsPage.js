@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Footer, Header, TextField } from "../../components";
-import "./ContactUsPage.css";
+import "./ContactUs.css";
 
 export const ContactUsPage = () => {
   return (
