@@ -16,7 +16,7 @@ export const ContactUsPage = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam
+            aliqua. Ut enim ad minim
           </p>
 
           <div id="contact-info-box-container">
