@@ -1,5 +1,6 @@
 import React from "react";
 import { Header, Footer, Button } from "../../components";
+import { CircularProgress } from "@mui/material";
 import { useUserContext } from "../../context";
 import { signOutFunction } from "../../firebase";
 import "./HomePage.css";
@@ -23,6 +24,7 @@ export const HomePage = () => {
         }}
       >
         Loading ...
+        <CircularProgress />
       </div>
     );
   }
